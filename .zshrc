@@ -1,8 +1,11 @@
+UNIX_USERNAME="lior"
+WIN_USERNAME="home"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/lior/.oh-my-zsh"
+export ZSH="/home/$UNIX_USERNAME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -104,3 +107,7 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# we have $HOME for Unix home dir,
+# let's define $WINHOME for the Windows home dir
+export "WINHOME=/mnt/c/Users/$WIN_USERNAME"
