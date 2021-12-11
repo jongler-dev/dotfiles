@@ -1,0 +1,32 @@
+[user]
+    name = Lior A.
+    email = jongler-dev@users.noreply.github.com
+
+[core]
+    autocrlf = input
+    pager = less -F -X
+
+[alias]
+    br = branch
+    co = checkout
+    st = status
+    dc = diff --cached
+    ds = diff --staged
+    last = log -1 HEAD
+    l = "!f() { git log -$1; }; f"
+    l1 = log -1
+    l2 = log -2
+    l3 = log -3
+    l4 = log -4
+    l5 = log -5
+    lg = log --oneline --decorate
+
+[color "grep"]
+    linenumber = yellow bold
+    match = red
+    filename = magenta
+
+[pull]
+    ff = only
+[push]
+    default = simple
