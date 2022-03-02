@@ -5,6 +5,7 @@
 [core]
     autocrlf = input
     pager = less -F -X
+    excludesfile = ~/.gitignore_global
 
 [alias]
     br = branch

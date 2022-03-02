@@ -1,0 +1,109 @@
+##############################################
+# General
+##############################################
+
+# unalias q
+
+# alias vi='vim' # vim is much nicer :)
+
+alias vialias='        vi ~/.alias'        # opens my alias file
+alias sourcealias='    source ~/.alias'    # refresh my aliases
+
+alias -- -='  vim -R - ' # used for viewing a command output in vi, e.g "hg diff file.ext |-"
+alias -- --=' less'
+
+# alias g='     \grep --color -n' # expression coloring and line numbers
+# alias grep='  grep --color -n'
+# alias rg='    grep -r'          # recursive grep
+
+alias l='     ls -la '
+alias ll='    ls -la '
+# alias l='     ls -la --color ' # --color is not recognized on this Mac
+
+function hist() { history | grep $1; }
+
+##############################################
+# cd shortcuts
+##############################################
+alias workspace=' cd ~/workspace'
+
+##############################################
+# helper functions
+##############################################
+
+# Paints the requested expression: ls -l | paint src
+function paint()         { sed "s/$1/`echo -e '\033[1;31m'`&`echo -e '\033[0m'`/g"; }
+function red()           { sed "s/$1/`echo -e '\033[1;31m'`&`echo -e '\033[0m'`/g"; }
+function yellow()        { sed "s/$1/`echo -e '\033[1;33m'`&`echo -e '\033[0m'`/g"; }
+function green()         { sed "s/$1/`echo -e '\033[1;32m'`&`echo -e '\033[0m'`/g"; }
+function blue()          { sed "s/$1/`echo -e '\033[1;34m'`&`echo -e '\033[0m'`/g"; }
+
+alias col="        tr -s ' ' | cut -d' ' -f"
+
+##############################################
+# git functions
+##############################################
+alias g='    git'
+alias gl='   git log'
+alias gl1='  git log -1'
+alias gl2='  git log -2'
+alias gl3='  git log -3'
+alias gl4='  git log -4'
+alias gls='  git ls'
+alias gs='   git status'
+alias gss='  git status -s'
+alias gsb='  git status -sb'
+alias gd='   git diff'
+alias gdw='  git diff -w'
+alias gdc='  git diff --cached'
+alias gdt='  git difftool -d'
+alias gds='  git stash show -p stash@{0}'
+alias gsd='  git stash show -p stash@{0}'
+alias gsl='  git stash list'
+alias ga='   git add'
+alias gaa='  git add -u'
+alias gam='  git add `git status -s | grep "MM \| M " | cut -c4-`'
+alias gco='  git checkout'
+alias gcm='  git commit -m'
+alias gcnm=' git commit -n -m'
+#alias gcma=' git commit --amend'
+#alias gpr='  git pull --rebase'
+alias grev=' git co --'
+alias gg='   git grep -Enp'
+alias gfr='  git fetch && git rebase origin/master'
+alias gfetchrebase=' git fetch && git rebase origin/master'
+alias gpushu=' git push -u origin `git rev-parse --abbrev-ref HEAD`' # push the current branch and set the remote as upstream
+
+##############################################
+# ssh / tunnels shortcuts
+##############################################
+alias ssh_with_key='  ssh -i ~/.ssh/id_rsa user@host'
+alias ssh_no_key='    ssh user@host'
+alias ssh_with_port=' ssh -D 33333 user@host'
+
+##############################################
+# misc shortcuts
+##############################################
+function curlxml() { curl -s $1 | python -c 'import sys;import xml.dom.minidom;s=sys.stdin.read();print(xml.dom.minidom.parseString(s).toprettyxml())'; }
+
+##############################################
+# app shortcuts
+##############################################
+alias diffmerge='  /Applications/DiffMerge.app/Contents/MacOS/DiffMerge' # MacOs
+alias kdiff3='     /Applications/kdiff3.app/Contents/MacOS/kdiff3'       # MacOs
+alias d2u='        dos2unix'
+
+##############################################
+# Android
+##############################################
+alias get_ip="adb shell ip route | grep wlan0 | grep -o 'src [^ ]*' | cut -b5- | uniq"
+
+##############################################
+# Node.js
+##############################################
+alias sign_puppeteer="sudo codesign --force --deep --sign - ./node_modules/puppeteer/.local-chromium/mac-*/chrome-mac/Chromium.app" # MacOS hack
+
+##############
+# personal
+##############
+
