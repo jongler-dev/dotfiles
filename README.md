@@ -4,6 +4,7 @@
 This repo enables me to track my configuration dotfiles for changes and for easily deploying them on a new machine (after too many years of doing that manually :sheep:)
 
 ## Setting up
+0. Make sure all the tools are installed (git, vim, zsh).
 1. Clone the repo locally:
 2. Run the install script
     ```
@@ -12,7 +13,8 @@ This repo enables me to track my configuration dotfiles for changes and for easi
 
 
 ## Optional: WSL specific config
-1. Use your own Unix/Win usernames instead of mine (update the following lines in `.zshrc`):
+0. WSL should be installed and configured.
+1. Use your own Unix/Win usernames instead of mine (update the following lines in `.zshrc`), e.g.:
     ```
     UNIX_USERNAME="lior"
     WIN_USERNAME="home"
