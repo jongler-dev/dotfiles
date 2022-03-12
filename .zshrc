@@ -112,3 +112,5 @@ export NVM_DIR="$HOME/.nvm"
 # we have $HOME for Unix home dir,
 # let's define $WINHOME for the Windows home dir
 export "WINHOME=/mnt/c/Users/$WIN_USERNAME"
+
+export PS1="${ZSH_ESSEMBEH_PREFIX}%{$fg[$ZSH_ESSEMBEH_COLOR]%}%n%{$reset_color%}@%{%B$fg[yellow]%}%~%{$reset_color%b%} $(zsh_essembeh_gitstatus)%(!.#.$) "

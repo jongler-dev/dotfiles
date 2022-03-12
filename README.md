@@ -1,10 +1,16 @@
 # dotfiles: my preferred settings and configuration files
 
 ## Why?
-This repo enables me to track my configuration dotfiles for changes and for easily deploying them on a new machine (after too many years of doing that manually :sheep:)
+This repo enables me to track my configuration dotfiles for changes and for easily deploying them on a new machine (after too many years of doing that manually :sheep:).
+
+This currently supports my dotfiles for:
+* shell aliases (e.g. 'gs' for git status)
+* git (git config + global git ignore)
+* vim
+* zsh
 
 ## Setting up
-0. Make sure all the tools are installed (git, vim, zsh).
+0. Make sure all the tools mentioned above are pre-installed.
 1. Clone the repo locally:
 2. Run the install script
     ```
