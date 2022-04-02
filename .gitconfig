@@ -6,6 +6,7 @@
     autocrlf = input
     pager = less -F -X
     excludesfile = ~/.gitignore_global
+    editor = vim
 
 [alias]
     br = branch
