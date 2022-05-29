@@ -75,6 +75,19 @@ alias gfetchrebase=' git fetch && git rebase origin/master'
 alias gpushu=' git push -u origin `git rev-parse --abbrev-ref HEAD`' # push the current branch and set the remote as upstream
 
 ##############################################
+# docker shortcuts
+##############################################
+alias d='    docker'
+alias di='   docker images'
+
+##############################################
+# kubernets shortcuts
+##############################################
+alias k="       minikube kubectl --"
+alias kc"       minikube kubectl --"
+alias kubectl=" minikube kubectl --"
+
+##############################################
 # ssh / tunnels shortcuts
 ##############################################
 alias ssh_with_key='  ssh -i ~/.ssh/id_rsa user@host'
